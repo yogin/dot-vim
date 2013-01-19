@@ -71,4 +71,6 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect pasted text
 nnoremap <leader>v V`]
 
+" open NERDTree with ctrl-o
+map <C-o> :NERDTreeToggle<CR>
 
