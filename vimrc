@@ -53,7 +53,9 @@ map <leader>sj :split<CR><C-W>j
 map <leader>sJ :split<CR><C-W>jG
 map <leader>sk :split<CR>
 map <leader>sK :split<CR>gg
-map <leader>t :tabnew<CR>
+
+map <leader><tab> :tabnew<CR>
+map <leader>o :CommandT<CR>
 
 map gj <C-w>j
 map gk <C-w>k
