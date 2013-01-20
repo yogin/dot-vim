@@ -112,3 +112,6 @@ nmap <C-t> :TagbarToggle<CR>
 "nmap <leader>cc :NERDComUncommentLine<CR>
 "map <C-/> :NERDComAlignedComment<CR>
 
+" ack
+map <leader>f :Ack<space>
+
