@@ -20,9 +20,6 @@ set autoindent
 set smartindent
 set showmode
 set showcmd
-set is
-set ic
-set scs
 set virtualedit=onemore
 set history=1000
 
