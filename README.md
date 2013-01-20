@@ -19,4 +19,5 @@ Plugins
  * Command-T - https://github.com/wincent/Command-T
  * NERDTree - https://github.com/scrooloose/nerdtree
  * Tagbar - http://majutsushi.github.com/tagbar/
+ * NERDCommenter - https://github.com/scrooloose/nerdcommenter
 
