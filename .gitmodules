@@ -13,3 +13,6 @@
 [submodule "bundle/theme-solarized"]
 	path = bundle/theme-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/theme-molokai"]
+	path = bundle/theme-molokai
+	url = git://github.com/tomasr/molokai.git

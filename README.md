@@ -24,6 +24,7 @@ Plugins
 Color Schemes
 -------------
 
- * solarized - https://github.com/altercation/vim-colors-solarized
+ * solarized -default- https://github.com/altercation/vim-colors-solarized
+ * molokai - https://github.com/tomasr/molokai
 
 

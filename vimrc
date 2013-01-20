@@ -1,67 +1,89 @@
 execute pathogen#infect()
 syntax on
+
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 let mapleader = ','
 filetype plugin on
 
-au FocusLost * :wa
-
-set number
-set visualbell
-
-set expandtab
-set tabstop=2
-set shiftwidth=2
+set autoread                        " check if file is updated fromm outside
+set nocompatible                    " not compatible with vi
+set number                          " line numbers
+set noerrorbells                    " no error bells
+set novisualbell                    " no visual bells
+set expandtab                       " use spaces instead of tabs
+set tabstop=2                       " 1 tab = 2 spaces
+set shiftwidth=2                    " autoindent 2 spaces
 set softtabstop=2
 set backspace=2
-
-set encoding=utf-8
+set encoding=utf-8                  " file encoding
 set autoindent
 set smartindent
 set showmode
 set showcmd
 set virtualedit=onemore
-set history=1000
-
+set history=1000                    " lines in history
 set laststatus=2
-set cursorline
+set cursorline                      " show current line
 set ttyfast
-set ruler
+set ruler                           " show line / column
+set ignorecase                      " case insensitive search
+set smartcase                       " case sensitive search if uppercase
+set incsearch                       " incremental search
+set showmatch                       " show matching bracket
+set hlsearch                        " highlight matches
+set colorcolumn=80                  " show column 80
+set backspace=indent,eol,start      " backspace through everything
+set so=7                            " 7 lines when scrolling up/down
+set wildmenu                        " enable wild menu (command completion)
 
-set ignorecase
-set smartcase
+set nobackup
+set nowb
+set noswapfile
 
-set incsearch
-set showmatch
-set hlsearch
+" autosave on focus lost
+au FocusLost * silent! wall
+
+" disable search match highlighting
 nnoremap <leader><space> :noh<cr>
 
 nnoremap <tab> %
 vnoremap <tab> %
-set colorcolumn=80
-
-"set list
-"set listchars=tab:▸\ ,eol:¬
 
 " Mappings
 inoremap kj <Esc>
+nmap <leader>w :w!<CR>
+
+" window splitting
 map <leader>sl :vsplit<CR><C-W>l
 map <leader>sh :vsplit<CR><C-W>h
 map <leader>sj :split<CR><C-W>j
 map <leader>sk :split<CR>
 
-map <leader><tab> :tabnew<CR>
-map <leader>o :CommandT<CR>
-
+" window movement
 map gj <C-w>j
 map gk <C-w>k
 map gl <C-w>l
 map gh <C-w>h
 
+" new tab and tab cycling
+map <leader><tab> :tabnew<CR>
 nnoremap <C-h> gT
 nnoremap <C-l> gt
+
+" Toggle paste mode                                                                                                                                  
+nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>                             
+imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+
+" set current wording directory to current buffer's
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Move a lines up/down with Control+UP/DOWN
+nmap <C-Down> mz:m+<cr>`z
+nmap <C-Up> mz:m-2<cr>`z
+vmap <C-Down> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <C-Up> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " clean all trailing whitespaces in file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -69,13 +91,18 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect pasted text
 nnoremap <leader>v V`]
 
-" open NERDTree with ctrl-o
+" PLUGINS
+
+" file lookup
+map <leader>o :CommandT<CR>
+
+" file browser
 map <C-o> :NERDTreeToggle<CR>
 
-" binding for tagbar
+" file structure
 nmap <C-t> :TagbarToggle<CR>
 
 " comments
-"map <C-/> :NERDComAlignedComment<CR>
 "nmap <leader>cc :NERDComUncommentLine<CR>
+"map <C-/> :NERDComAlignedComment<CR>
 
