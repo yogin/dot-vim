@@ -7,11 +7,15 @@ colorscheme solarized
 let mapleader = ','
 filetype plugin on
 
+" turn annoyings error signals off
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  au GUIEnter * set visualbell t_vb=
+endif
+
 set autoread                        " check if file is updated fromm outside
 set nocompatible                    " not compatible with vi
 set number                          " line numbers
-set noerrorbells                    " no error bells
-set novisualbell                    " no visual bells
 set expandtab                       " use spaces instead of tabs
 set tabstop=2                       " 1 tab = 2 spaces
 set shiftwidth=2                    " autoindent 2 spaces
@@ -43,7 +47,9 @@ set nowb
 set noswapfile
 
 " autosave on focus lost
-au FocusLost * silent! wall
+if has('autocmd')
+  au FocusLost * silent! wall
+endif
 
 " disable search match highlighting
 nnoremap <leader><space> :noh<cr>
