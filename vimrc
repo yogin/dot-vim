@@ -1,6 +1,8 @@
 execute pathogen#infect()
 syntax on
-colorscheme desert
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 let mapleader = ','
 filetype plugin on
 

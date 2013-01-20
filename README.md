@@ -21,3 +21,9 @@ Plugins
  * Tagbar - http://majutsushi.github.com/tagbar/
  * NERDCommenter - https://github.com/scrooloose/nerdcommenter
 
+Color Schemes
+-------------
+
+ * solarized - https://github.com/altercation/vim-colors-solarized
+
+
