@@ -23,6 +23,7 @@ Plugins
  * NERDTree - https://github.com/scrooloose/nerdtree
  * Tagbar - http://majutsushi.github.com/tagbar/
  * NERDCommenter - https://github.com/scrooloose/nerdcommenter
+ * Ack.vim - https://github.com/mileszs/ack.vim
 
 Color Schemes
 -------------
