@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax on
 colorscheme desert
 let mapleader = ','
+filetype plugin on
 
 au FocusLost * :wa
 
@@ -50,9 +51,7 @@ inoremap kj <Esc>
 map <leader>sl :vsplit<CR><C-W>l
 map <leader>sh :vsplit<CR><C-W>h
 map <leader>sj :split<CR><C-W>j
-map <leader>sJ :split<CR><C-W>jG
 map <leader>sk :split<CR>
-map <leader>sK :split<CR>gg
 
 map <leader><tab> :tabnew<CR>
 map <leader>o :CommandT<CR>
@@ -73,4 +72,11 @@ nnoremap <leader>v V`]
 
 " open NERDTree with ctrl-o
 map <C-o> :NERDTreeToggle<CR>
+
+" binding for tagbar
+nmap <C-t> :TagbarToggle<CR>
+
+" comments
+"map <C-/> :NERDComAlignedComment<CR>
+"nmap <leader>cc :NERDComUncommentLine<CR>
 
