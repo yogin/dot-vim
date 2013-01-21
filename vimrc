@@ -122,7 +122,7 @@ map <leader>o :CommandT<CR>
 map <C-o> <plug>NERDTreeTabsToggle<CR>
 
 " file structure
-nmap <C-t> :TagbarToggle<CR>
+nmap <C-t> :TagbarToggle<CR>gl
 
 " comments
 "nmap <leader>cc :NERDComUncommentLine<CR>
