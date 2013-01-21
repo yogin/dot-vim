@@ -25,6 +25,7 @@ Plugins
  * NERDCommenter - https://github.com/scrooloose/nerdcommenter
  * Ack.vim - https://github.com/mileszs/ack.vim
  * Fugitive - https://github.com/tpope/vim-fugitive
+ * Easymotion - https://github.com/Lokaltog/vim-easymotion
 
 Color Schemes
 -------------
