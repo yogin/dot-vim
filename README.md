@@ -27,6 +27,8 @@ Plugins
  * Ack.vim - https://github.com/mileszs/ack.vim
  * Fugitive - https://github.com/tpope/vim-fugitive
  * Easymotion - https://github.com/Lokaltog/vim-easymotion
+ * Syntastic - https://github.com/scrooloose/syntastic
+ * Indent-Guides - https://github.com/nathanaelkane/vim-indent-guides
 
 Color Schemes
 -------------

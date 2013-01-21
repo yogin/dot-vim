@@ -2,9 +2,9 @@ execute pathogen#infect()
 Helptags
 syntax on
 
-set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+set background=dark
 let mapleader = ','
 filetype plugin on
 
@@ -36,6 +36,9 @@ set statusline+=%w%h%m%r                 " Options
 set statusline+=%{fugitive#statusline()} " Git Hotness
 set statusline+=\ [%{&ff}/%Y]            " Filetype
 set statusline+=\ [%{getcwd()}]          " Current dir
+set statusline+=%#warningmsg#                                                                                                                                                                                                          
+set statusline+=%{SyntasticStatuslineFlag()}                                
+set statusline+=%*
 set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 set ttyfast
 set ruler                           " show line / column
@@ -127,4 +130,13 @@ nmap <C-t> :TagbarToggle<CR>
 
 " ack
 map <leader>f :Ack<space>
+
+"let g:indent_guides_auto_colors = 0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+
+" syntastic, auto open/close on syntax errors
+let g:syntastic_auto_loc_list=1
 
