@@ -113,6 +113,9 @@ nnoremap <leader>v V`]
 vnoremap < <gv
 vnoremap > >gv
 
+" Omnicomplete
+"inoremap <C-space> <C-x><C-o>
+
 " PLUGINS
 
 " file lookup

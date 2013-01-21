@@ -6,6 +6,11 @@ To use, simply clone this repo to ~/.vim and create a symlink from ~/.vimrc to ~
     $ git clone --recursive git@github.com:yogin/idz-vim.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
 
+You will also need to compile Command-T:
+
+    $ cd ~/.vim/bundle/command-t/ruby/command-t
+    $ ruby extconf.rb && make
+
 Easy enough!
 
 Dependencies
@@ -30,6 +35,7 @@ Plugins
  * Syntastic - https://github.com/scrooloose/syntastic
  * Indent-Guides - https://github.com/nathanaelkane/vim-indent-guides
  * Powerline - https://github.com/Lokaltog/vim-powerline
+ * Vim-Rails - https://github.com/tpope/vim-rails
 
 Color Schemes
 -------------
