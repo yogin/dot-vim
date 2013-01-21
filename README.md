@@ -21,6 +21,7 @@ Plugins
  * Pathogen - https://github.com/tpope/vim-pathogen
  * Command-T - https://github.com/wincent/Command-T
  * NERDTree - https://github.com/scrooloose/nerdtree
+ * NERDTree-Tabs - https://github.com/jistr/vim-nerdtree-tabs
  * Tagbar - http://majutsushi.github.com/tagbar/
  * NERDCommenter - https://github.com/scrooloose/nerdcommenter
  * Ack.vim - https://github.com/mileszs/ack.vim
