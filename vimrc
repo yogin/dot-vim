@@ -124,18 +124,8 @@ map <C-o> <plug>NERDTreeTabsToggle<CR>
 " file structure
 nmap <C-t> :TagbarToggle<CR>gl
 
-" comments
-"nmap <leader>cc :NERDComUncommentLine<CR>
-"map <C-/> :NERDComAlignedComment<CR>
-
 " ack
 map <leader>f :Ack<space>
-
-"let g:indent_guides_auto_colors = 0
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 
 " syntastic, auto open/close on syntax errors
 let g:syntastic_auto_loc_list=1
