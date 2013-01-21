@@ -29,6 +29,7 @@ Plugins
  * Easymotion - https://github.com/Lokaltog/vim-easymotion
  * Syntastic - https://github.com/scrooloose/syntastic
  * Indent-Guides - https://github.com/nathanaelkane/vim-indent-guides
+ * Powerline - https://github.com/Lokaltog/vim-powerline
 
 Color Schemes
 -------------
