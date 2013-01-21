@@ -31,8 +31,15 @@ set virtualedit=onemore
 set history=1000                    " lines in history
 set laststatus=2
 set cursorline                      " show current line
+set statusline=%<%f\                     " Filename
+set statusline+=%w%h%m%r                 " Options
+set statusline+=%{fugitive#statusline()} " Git Hotness
+set statusline+=\ [%{&ff}/%Y]            " Filetype
+set statusline+=\ [%{getcwd()}]          " Current dir
+set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 set ttyfast
 set ruler                           " show line / column
+set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set ignorecase                      " case insensitive search
 set smartcase                       " case sensitive search if uppercase
 set incsearch                       " incremental search
@@ -42,6 +49,7 @@ set colorcolumn=80                  " show column 80
 set backspace=indent,eol,start      " backspace through everything
 set so=7                            " 7 lines when scrolling up/down
 set wildmenu                        " enable wild menu (command completion)
+"set wildmode=list:longest,ful
 
 set nobackup
 set nowb
@@ -97,6 +105,10 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " reselect pasted text
 nnoremap <leader>v V`]
+
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
 
 " PLUGINS
 

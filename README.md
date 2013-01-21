@@ -24,6 +24,7 @@ Plugins
  * Tagbar - http://majutsushi.github.com/tagbar/
  * NERDCommenter - https://github.com/scrooloose/nerdcommenter
  * Ack.vim - https://github.com/mileszs/ack.vim
+ * Fugitive - https://github.com/tpope/vim-fugitive
 
 Color Schemes
 -------------
