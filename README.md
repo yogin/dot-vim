@@ -6,11 +6,6 @@ To use, simply clone this repo to ~/.vim and create a symlink from ~/.vimrc to ~
     $ git clone --recursive git@github.com:yogin/idz-vim.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
 
-You will also need to compile Command-T:
-
-    $ cd ~/.vim/bundle/command-t/ruby/command-t
-    $ ruby extconf.rb && make
-
 Easy enough!
 
 Dependencies
@@ -24,7 +19,7 @@ Plugins
 -------
 
  * Pathogen - https://github.com/tpope/vim-pathogen
- * Command-T - https://github.com/wincent/Command-T
+ * CtrlP - https://github.com/kien/ctrlp.vim
  * NERDTree - https://github.com/scrooloose/nerdtree
  * NERDTree-Tabs - https://github.com/jistr/vim-nerdtree-tabs
  * Tagbar - http://majutsushi.github.com/tagbar/

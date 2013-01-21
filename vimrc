@@ -122,7 +122,8 @@ vmap <C-c> :w !pbcopy<CR><CR>
 " PLUGINS
 
 " file lookup
-map <leader>o :CommandT<CR>
+"map <leader>o :CommandT<CR>
+map <leader>o :CtrlP<CR>
 
 " file browser
 map <C-o> <plug>NERDTreeTabsToggle<CR>
