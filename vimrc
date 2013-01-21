@@ -52,7 +52,7 @@ set colorcolumn=80                  " show column 80
 set backspace=indent,eol,start      " backspace through everything
 set so=7                            " 7 lines when scrolling up/down
 set wildmenu                        " enable wild menu (command completion)
-"set wildmode=list:longest,ful
+set clipboard=unnamed               " osx clipboard
 
 set nobackup
 set nowb
@@ -113,6 +113,9 @@ nnoremap <leader>v V`]
 vnoremap < <gv
 vnoremap > >gv
 
+" copy visual block to osx clipboard
+vmap <C-c> :w !pbcopy<CR><CR>
+
 " Omnicomplete
 "inoremap <C-space> <C-x><C-o>
 
@@ -132,4 +135,8 @@ map <leader>f :Ack<space>
 
 " syntastic, auto open/close on syntax errors
 let g:syntastic_auto_loc_list=1
+
+" vim-rails
+map go <C-w>gf
+
 
