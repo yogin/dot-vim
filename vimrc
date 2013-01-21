@@ -116,7 +116,7 @@ vnoremap > >gv
 map <leader>o :CommandT<CR>
 
 " file browser
-map <C-o> :NERDTreeToggle<CR>
+map <C-o> <plug>NERDTreeTabsToggle<CR>
 
 " file structure
 nmap <C-t> :TagbarToggle<CR>
