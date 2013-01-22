@@ -72,6 +72,7 @@ vnoremap <tab> %
 " Mappings
 inoremap kj <Esc>
 nmap <leader>w :w!<CR>
+nmap <leader>q :q<CR>
 
 " window splitting
 map <leader>sl :vsplit<CR><C-W>l
@@ -84,6 +85,12 @@ map gj <C-w>j
 map gk <C-w>k
 map gl <C-w>l
 map gh <C-w>h
+
+" window resizing
+map <silent> <S-h> <C-w><
+map <silent> <S-j> <C-w>-
+map <silent> <S-k> <C-w>+
+map <silent> <S-l> <C-w>>
 
 " new tab and tab cycling
 map <leader><tab> :tabnew<CR>
