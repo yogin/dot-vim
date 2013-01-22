@@ -31,6 +31,7 @@ Plugins
  * Indent-Guides - https://github.com/nathanaelkane/vim-indent-guides
  * Powerline - https://github.com/Lokaltog/vim-powerline
  * Vim-Rails - https://github.com/tpope/vim-rails
+ * Snipmate - https://github.com/msanders/snipmate.vim
 
 Color Schemes
 -------------

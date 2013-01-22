@@ -2,9 +2,10 @@ execute pathogen#infect()
 Helptags
 syntax on
 
-let g:solarized_termcolors=256
-colorscheme solarized
+"let g:solarized_termcolors=256
 set background=dark
+"colorscheme solarized
+colorscheme molokai
 let mapleader = ','
 filetype plugin on
 
@@ -102,6 +103,11 @@ nmap <C-Down> mz:m+<cr>`z
 nmap <C-Up> mz:m-2<cr>`z
 vmap <C-Down> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <C-Up> :m'<-2<cr>`>my`<mzgv`yo`z
+
+nmap <C-j> mz:m+<cr>`z
+nmap <C-k> mz:m-2<cr>`z
+vmap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " clean all trailing whitespaces in file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
