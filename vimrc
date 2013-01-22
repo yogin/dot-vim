@@ -135,7 +135,6 @@ vmap <C-c> :w !pbcopy<CR><CR>
 " PLUGINS
 
 " file lookup
-"map <leader>o :CommandT<CR>
 map <leader>o :CtrlP<CR>
 
 " file browser
