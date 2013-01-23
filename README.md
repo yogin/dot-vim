@@ -14,6 +14,8 @@ Dependencies
  * exuberant ctags - http://ctags.sourceforge.net/
    * Debian/Ubuntu: `sudo apt-get install exuberant-ctags`
    * Mac/Brew: `brew install ctags-exuberant`
+ * ack
+   * Mac/Brew: `brew install ack`
 
 Plugins
 -------
