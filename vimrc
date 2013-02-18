@@ -147,6 +147,7 @@ nmap <C-t> :TagbarToggle<CR>gl
 map <leader>f :Ack<space>
 
 " syntastic, auto open/close on syntax errors
+let g:syntastic_ruby_exec='/usr/local/opt/ruby/bin/ruby'
 let g:syntastic_auto_loc_list=1
 
 " vim-rails
