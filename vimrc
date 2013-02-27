@@ -153,4 +153,6 @@ let g:syntastic_auto_loc_list=1
 " vim-rails
 map go <C-w>gf
 
+" BufExplorer
+map <C-b> :BufExplorer<CR>
 
