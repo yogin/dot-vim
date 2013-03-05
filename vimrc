@@ -59,6 +59,9 @@ set nobackup
 set nowb
 set noswapfile
 
+set ssop-=options    " do not store global and local values in a session
+set ssop-=folds      " do not store folds
+
 " autosave on focus lost
 if has('autocmd')
   au FocusLost * silent! wall
