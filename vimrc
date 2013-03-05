@@ -139,6 +139,8 @@ vmap <C-c> :w !pbcopy<CR><CR>
 
 " file lookup
 map <leader>o :CtrlP<CR>
+map <leader>b :CtrlPBuffer<CR>
+map <leader>r :CtrlPMRU<CR>
 
 " file browser
 map <C-o> <plug>NERDTreeTabsToggle<CR>
@@ -157,7 +159,4 @@ let g:syntastic_auto_loc_list=1
 
 " vim-rails
 map go <C-w>gf
-
-" BufExplorer
-map <C-b> :BufExplorer<CR>
 
