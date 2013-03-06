@@ -33,7 +33,11 @@ Plugins
  * Indent-Guides - https://github.com/nathanaelkane/vim-indent-guides
  * Powerline - https://github.com/Lokaltog/vim-powerline
  * Vim-Rails - https://github.com/tpope/vim-rails
- * Snipmate - https://github.com/msanders/snipmate.vim
+ * Unimpaired - https://github.com/tpope/vim-unimpaired
+ * Snipmate - https://github.com/garbas/vim-snipmate
+   * https://github.com/tomtom/tlib_vim
+   * https://github.com/honza/snipmate-snippets
+   * https://github.com/MarcWeber/vim-addon-mw-utils
 
 Color Schemes
 -------------
