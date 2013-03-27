@@ -132,6 +132,9 @@ vnoremap > >gv
 " copy visual block to osx clipboard
 vmap <C-c> :w !pbcopy<CR><CR>
 
+" toggle fold
+nnoremap <space> za
+
 " Omnicomplete
 "inoremap <C-space> <C-x><C-o>
 
