@@ -55,3 +55,6 @@
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
+[submodule "bundle/vim-signature"]
+	path = bundle/vim-signature
+	url = git://github.com/kshenoy/vim-signature.git

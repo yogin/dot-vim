@@ -4,8 +4,8 @@ syntax on
 
 "let g:solarized_termcolors=256
 set background=dark
-"colorscheme solarized
-colorscheme molokai
+colorscheme solarized
+"colorscheme molokai
 let mapleader = ','
 filetype plugin on
 
