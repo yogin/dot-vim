@@ -34,6 +34,8 @@ Plugins
  * Powerline - https://github.com/Lokaltog/vim-powerline
  * Vim-Rails - https://github.com/tpope/vim-rails
  * Unimpaired - https://github.com/tpope/vim-unimpaired
+ * vim-multiple-cursors - https://github.com/terryma/vim-multiple-cursors
+ * vim-expand-region - https://github.com/terryma/vim-expand-region
  * Snipmate - https://github.com/garbas/vim-snipmate
    * https://github.com/tomtom/tlib_vim
    * https://github.com/honza/snipmate-snippets
