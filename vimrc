@@ -146,6 +146,8 @@ map <leader>b :CtrlPBuffer<CR>
 map <leader>r :CtrlPMRU<CR>
 
 " file browser
+set autochdir
+let NERDTreeChDirMode=2
 map <C-o> <plug>NERDTreeTabsToggle<CR>
 
 " file structure
