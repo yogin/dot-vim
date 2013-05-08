@@ -1,4 +1,4 @@
-idz-vim
+dot-vim
 =============
 
 To use, simply clone this repo to ~/.vim and create a symlink from ~/.vimrc to ~/.vim/vimrc
@@ -36,6 +36,7 @@ Plugins
  * Unimpaired - https://github.com/tpope/vim-unimpaired
  * vim-multiple-cursors - https://github.com/terryma/vim-multiple-cursors
  * vim-expand-region - https://github.com/terryma/vim-expand-region
+ * supertab - https://github.com/ervandew/supertab
  * Snipmate - https://github.com/garbas/vim-snipmate
    * https://github.com/tomtom/tlib_vim
    * https://github.com/honza/snipmate-snippets
