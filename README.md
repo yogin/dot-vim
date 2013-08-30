@@ -15,6 +15,7 @@ Dependencies
    * Debian/Ubuntu: `sudo apt-get install exuberant-ctags`
    * Mac/Brew: `brew install ctags-exuberant`
  * ack
+   * Debian/Ubuntu: `sudo apt-get install ack`
    * Mac/Brew: `brew install ack`
 
 Plugins
@@ -39,7 +40,7 @@ Plugins
  * supertab - https://github.com/ervandew/supertab
  * Snipmate - https://github.com/garbas/vim-snipmate
    * https://github.com/tomtom/tlib_vim
-   * https://github.com/honza/snipmate-snippets
+   * https://github.com/honza/vim-snippets
    * https://github.com/MarcWeber/vim-addon-mw-utils
 
 Color Schemes
