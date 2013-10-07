@@ -17,6 +17,8 @@ Dependencies
  * ack
    * Debian/Ubuntu: `sudo apt-get install ack`
    * Mac/Brew: `brew install ack`
+ * solarized for iTerm2 - http://ethanschoonover.com/solarized
+
 
 Plugins
 -------
