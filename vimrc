@@ -62,6 +62,13 @@ set noswapfile
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
 
+" add syntax highlighting to some known files
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead Capfile set filetype=ruby
+autocmd BufNewFile,BufRead Rakefile set filetype=ruby
+autocmd BufNewFile,BufRead Cheffile set filetype=ruby
+autocmd BufNewFile,BufRead config.ru set filetype=ruby
+
 " autosave on focus lost
 if has('autocmd')
   au FocusLost * silent! wall
