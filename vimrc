@@ -162,7 +162,7 @@ nmap <C-t> :TagbarToggle<CR>gl
 
 " ack
 "let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column  --type=nohtml"
-let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --ignore-dir=doc"
+let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --ignore-dir=doc --ignore-file=ext:log"
 map <leader>f :Ack!<space>
 
 " syntastic, auto open/close on syntax errors
