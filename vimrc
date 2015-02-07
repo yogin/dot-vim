@@ -62,6 +62,13 @@ set noswapfile
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
 
+" add syntax highlighting to some known files
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead Capfile set filetype=ruby
+autocmd BufNewFile,BufRead Rakefile set filetype=ruby
+autocmd BufNewFile,BufRead Cheffile set filetype=ruby
+autocmd BufNewFile,BufRead config.ru set filetype=ruby
+
 " autosave on focus lost
 if has('autocmd')
   au FocusLost * silent! wall
@@ -155,7 +162,7 @@ nmap <C-t> :TagbarToggle<CR>gl
 
 " ack
 "let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column  --type=nohtml"
-let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --ignore-dir=doc"
+let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --ignore-dir=doc --ignore-file=ext:log"
 map <leader>f :Ack!<space>
 
 " syntastic, auto open/close on syntax errors
