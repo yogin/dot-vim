@@ -67,3 +67,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
+[submodule "bundle/thrift.vim"]
+	path = bundle/thrift.vim
+	url = https://github.com/solarnz/thrift.vim
