@@ -68,6 +68,8 @@ autocmd BufNewFile,BufRead Capfile set filetype=ruby
 autocmd BufNewFile,BufRead Rakefile set filetype=ruby
 autocmd BufNewFile,BufRead Cheffile set filetype=ruby
 autocmd BufNewFile,BufRead config.ru set filetype=ruby
+autocmd BufNewFile,BufRead *.rabl set filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 
 " autosave on focus lost
 if has('autocmd')
