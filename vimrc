@@ -11,6 +11,22 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Plugins
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'itchyny/lightline.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'terryma/vim-expand-region'
+Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
+Plugin 'fatih/vim-go'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -66,4 +82,9 @@ set nowb
 set noswapfile
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
+
+"
+" PLUGINS CONFIGURATION
+"
+
 
