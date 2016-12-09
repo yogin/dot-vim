@@ -1,18 +1,50 @@
-execute pathogen#infect()
-Helptags
-syntax on
+"
+" VUNDLE CONFIGURATION
+"
 
-"let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
-"colorscheme molokai
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'itchyny/lightline.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
+Plugin 'fatih/vim-go'
+
+call vundle#end()
+filetype plugin indent on
+
+"
+" VIM CONFIGURATION
+"
+
 let mapleader = ','
 filetype plugin on
+syntax on
 
 " turn annoyings error signals off
 set noerrorbells visualbell t_vb=
 if has('autocmd')
   au GUIEnter * set visualbell t_vb=
+
+  " autosave on focus lost
+  au FocusLost * silent! wall
 endif
 
 set autoread                        " check if file is updated fromm outside
@@ -32,15 +64,6 @@ set virtualedit=onemore
 set history=1000                    " lines in history
 set laststatus=2
 set cursorline                      " show current line
-set statusline=%<%f\                     " Filename
-set statusline+=%w%h%m%r                 " Options
-set statusline+=%{fugitive#statusline()} " Git Hotness
-set statusline+=\ [%{&ff}/%Y]            " Filetype
-set statusline+=\ [%{getcwd()}]          " Current dir
-set statusline+=%#warningmsg#                                                                                                                                                                                                          
-set statusline+=%{SyntasticStatuslineFlag()}                                
-set statusline+=%*
-set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 set ttyfast
 set ruler                           " show line / column
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
@@ -54,11 +77,9 @@ set backspace=indent,eol,start      " backspace through everything
 set so=7                            " 7 lines when scrolling up/down
 set wildmenu                        " enable wild menu (command completion)
 set clipboard=unnamed               " osx clipboard
-
 set nobackup
 set nowb
 set noswapfile
-
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
 
@@ -70,11 +91,6 @@ autocmd BufNewFile,BufRead Cheffile set filetype=ruby
 autocmd BufNewFile,BufRead config.ru set filetype=ruby
 autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
-
-" autosave on focus lost
-if has('autocmd')
-  au FocusLost * silent! wall
-endif
 
 " disable search match highlighting
 nnoremap <leader><space> :noh<cr>
@@ -110,8 +126,8 @@ map <leader><tab> :tabnew<CR>
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
-" Toggle paste mode                                                                                                                                  
-nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>                             
+" Toggle paste mode
+nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
 " set current wording directory to current buffer's
@@ -144,33 +160,79 @@ vmap <C-c> :w !pbcopy<CR><CR>
 " toggle fold
 nnoremap <space> za
 
-" Omnicomplete
-"inoremap <C-space> <C-x><C-o>
+"
+" PLUGINS CONFIGURATION
+"
 
-" PLUGINS
+" Plugin 'altercation/vim-colors-solarized'
+set background=dark
+colorscheme solarized
 
-" file lookup
+" Plugin 'kien/ctrlp.vim'
 map <leader>o :CtrlP<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>r :CtrlPMRU<CR>
 
-" file browser
-"set autochdir
-"let NERDTreeChDirMode=2
-map <C-o> <plug>NERDTreeTabsToggle<CR>
-
-" file structure
-nmap <C-t> :TagbarToggle<CR>gl
-
-" ack
-"let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column  --type=nohtml"
-let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --ignore-dir=doc --ignore-file=ext:log"
+" Plugin 'mileszs/ack.vim'
+"let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --type=nohtml"
+"let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column --ignore-dir=doc --ignore-file=ext:log"
+" Use Ag (the silver searcher)
+"let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'ag --vimgrep --smart-case'
 map <leader>f :Ack!<space>
 
-" syntastic, auto open/close on syntax errors
+" Plugin 'scrooloose/nerdtree'
+map <C-o> <plug>NERDTreeTabsToggle<CR>
+
+" Plugin 'majutsushi/tagbar'
+nmap <C-t> :TagbarToggle<CR>gl
+
+" Plugin 'itchyny/lightline.vim'
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'relativepath', 'modified' ],
+      \             [ 'ctrlpmark', 'syntastic' ] ]
+      \ },
+      \ 'component': {
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_function': {
+      \   'ctrlpmark': 'CtrlPMark',
+      \   'syntastic': 'SyntasticStatuslineFlag'
+      \ },
+      \ 'component_visible_condition': {
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ }
+      \ }
+
+" Plugin 'scrooloose/syntastic'
 let g:syntastic_ruby_exec='/usr/local/opt/ruby/bin/ruby'
 let g:syntastic_auto_loc_list=2
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
-" vim-rails
-map go <C-w>gf
+"let g:syntastic_mode_map = { 'passive_filetypes': ['go'] }
+"let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
+" use goimports for formatting
+let g:go_fmt_command = "goimports"
+
+" turn highlighting on
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+"let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['govet', 'errcheck']
+
+au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
+au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 
