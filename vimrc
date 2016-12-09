@@ -39,7 +39,7 @@ filetype plugin on
 syntax on
 
 " turn annoyings error signals off
-" set noerrorbells visualbell t_vb=
+set noerrorbells visualbell t_vb=
 if has('autocmd')
   au GUIEnter * set visualbell t_vb=
 
