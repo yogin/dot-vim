@@ -3,7 +3,7 @@ dot-vim
 
 To use, simply clone this repo to ~/.vim and create a symlink from ~/.vimrc to ~/.vim/vimrc
 
-    $ git clone --recursive git@github.com:yogin/dot-vim.git ~/.vim
+    $ git clone git@github.com:yogin/dot-vim.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
 
 For best results, set terminal to `xterm-256color`
